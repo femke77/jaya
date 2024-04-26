@@ -7,8 +7,6 @@ import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Chip from '@mui/material/Chip';
-import { display, padding, positions, width } from '@mui/system';
-import { Opacity } from '@mui/icons-material';
 
 const styles = {
   card: {
@@ -22,12 +20,6 @@ const styles = {
     opacity: '1'
 
   },
-  // hover: {
-  //   // position: 'absolute',
-  //   background: '#1f3d4738',
-  //   backdropFilter: 'blue(5px)'
-
-  // },
   icons: {
     display: 'flex',
     flexDirection: 'row',
@@ -68,8 +60,8 @@ export default function ProjectCard({ img, title, subtitle, github, website, chi
       { img && <CardMedia
         style={styles.image}
         component="img"
-        alt={img}
-        image={`/src/assets/images/${img}.png`}
+        alt={title}
+        image={img}
       /> }
       </div>
       <CardContent>

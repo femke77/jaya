@@ -27,32 +27,23 @@ const StyledTooltip = styled(({ className, ...props }) => (
   },
 }));
 
-export default function RightSocial() {
+export default function RightSocial({styles, placement, color, background}) {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'fixed',
-        right: '50px',
-        top: '25vh',
-      }}
-    >
+    <Box style={styles}>
       {socialIcons.map(({ icon, label, href }, index) => (
         <StyledTooltip 
           key={index} 
           title={label} 
-          placement="left"
+          placement={placement}
           arrow 
           >
           <Fab 
-          color="primary" 
+          color={color} 
           aria-label={label} 
           href={href}
           sx={{
             marginTop: '15px',
-            background: 'transparent', 
-            outlineColor: 'white',
+            background: {background}, 
             boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)'
           }}>
             {icon}

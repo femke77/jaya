@@ -31,7 +31,7 @@ export default function Intro() {
 
   return (
     <Grid container={true} id="home" spacing={2}>
-      <Grid xs={8}>
+      <Grid xs={12} sm={10} md={8}>
         <Item sx={{ textAlign: 'left' }}>
           <h2>Jaya Baldwin</h2>
           <h1>Web +</h1>

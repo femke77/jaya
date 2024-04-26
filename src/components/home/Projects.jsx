@@ -2,9 +2,14 @@ import Grid from '@mui/material/Grid';
 import styled from '@mui/system/styled';
 import ProjectCard from '../home/ProjectCard.jsx';
 import { Grow } from '@mui/material';
+import portfolio from '../../assets/images/portfolio.png'
+import elevate from '../../assets/images/elevate.png'
+import weatherDashboard from '../../assets/images/weather-dashboard.png'
+import socialNetwork from '../../assets/images/social-network-api.png'
+import ecommerce from '../../assets/images/e-commerce-backend.png'
+import employeeTracker from '../../assets/images/employee-tracker.png'
 
 const Item = styled('div')(({ theme }) => ({
-  // background: 'transparent',
   padding: theme.spacing(1),
 }));
 
@@ -20,7 +25,7 @@ function ProjectText() {
 
 const projectData = [
   {
-    img: 'portfolio', 
+    img: portfolio, 
     title: 'Portfolio', 
     subtitle: 'Personal web dev folder built with React', 
     github: 'https://github.com/jayabaldwin/jaya-react-portfolio', 
@@ -28,7 +33,7 @@ const projectData = [
     chips: ['React.js', 'Node.js', 'Material UI']
   },
   {
-    img: 'elevate', 
+    img: elevate, 
     title: 'Elevate', 
     subtitle: 'Enhanced company management software', 
     github: 'https://github.com/jayabaldwin/elevate', 
@@ -36,7 +41,7 @@ const projectData = [
     chips: ['Node.js', 'MySQL', 'Sequelize', 'Express.js', 'Bootstrap' ]
   },
   {
-    img: 'weather-dashboard', 
+    img: weatherDashboard, 
     title: 'Weather Dashboard', 
     subtitle: 'A 5-Day Weather Forecast utilising Open Weather Maps Api', 
     github: 'https://github.com/jayabaldwin/weather-dashboard', 
@@ -44,21 +49,21 @@ const projectData = [
     chips: ['Javascript', 'HTML', 'CSS']
   },
   {
-    img: 'social-network-api', 
+    img: socialNetwork, 
     title: 'Social Network API', 
     subtitle: 'Simplistic social network API utilising MongoDB', 
     github: 'https://github.com/jayabaldwin/social-network-api',
     chips: ['Node.js', 'MongoDB', 'Mongoose', 'Express.js'] 
   },
   {
-    img: 'e-commerce-backend', 
+    img: ecommerce, 
     title: 'E-Commerce Backend Database', 
     subtitle: 'A backend e-commerce application that utilises Express.js API and Sequelize to interact with a MySQL database', 
     github: 'https://github.com/jayabaldwin/e-commerce-backend', 
     chips: ['Node.js', 'MySQL', 'Sequelize', 'Express.js']
   },
   {
-    img: 'employee-tracker', 
+    img: employeeTracker, 
     title: 'SQL: Employee Tracker', 
     subtitle: "Content management systems (CMS), CLI application, to manage a company's employee database, using Node.js, Inquirer, and MySQL.", 
     github: 'https://github.com/jayabaldwin/employee-tracker', 
@@ -89,7 +94,7 @@ export default function Projects() {
       </Grid>
       {projectData.map((project, index) => (
         <Grow key={index} in={true} timeout={1500 * index}>
-          <Grid key={index} item sm={12} md={12} lg={6} xl={4}>
+          <Grid key={index} item xs={12} sm={6} md={6} lg={6} xl={4}>
               <ProjectCard {...project}/>
           </Grid>
           </Grow> 

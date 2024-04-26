@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-import { width } from '@mui/system';
 
 
 const styles = {
@@ -20,7 +19,8 @@ const styles = {
     borderRadius: '15px',
     padding: '30px',
     marginTop: '20px',
-    width: '70%'
+    width: '100%',
+    maxWidth: '600px'
   }
 };
 
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 id="message"
                 label="Message"
                 name="message"
-                // onChange={handleChange("message")}
+                onChange={handleChange("message")}
                 margin="normal"
                 multiline
                 rowsMax="4"
@@ -154,7 +154,6 @@ const ContactForm = () => {
         <Alert
           onClose={handleClose}
           severity={notificationSeverity}
-          variant="filled"
           sx={{ width: '100%' }}
         >
           {notificationMessage}

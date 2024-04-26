@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import './App.css'
 import CssBaseline from '@mui/material/CssBaseline';
-import TrackVisibility from 'react-on-screen';
+// import TrackVisibility from 'react-on-screen';
 
 // Completely rework color pallete 
 const theme = createTheme({
@@ -28,6 +28,15 @@ const theme = createTheme({
       'Poppins',
       'sans-serif',
     ].join(','),
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 670,
+      md: 900,
+      lg: 1024,
+      xl: 1200
+    }
   }
 });
 
@@ -36,12 +45,12 @@ function App() {
   return (
     <>
     <ThemeProvider theme={theme}>
-      <TrackVisibility>
+      {/* <TrackVisibility> */}
       <CssBaseline />
       <main>
         <Outlet />
       </main>
-      </TrackVisibility>
+      {/* </TrackVisibility> */}
     </ThemeProvider>
     </>
   );
